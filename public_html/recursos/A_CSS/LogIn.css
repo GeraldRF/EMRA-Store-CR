@@ -1,0 +1,71 @@
+.contenedor {
+  display:flex;
+  flex-direction: column;
+  min-height:30;
+}
+
+.contenedor > div {
+  flex:1;
+  display:flex;
+}
+
+.msgErr{
+    text-align:center;
+    color:red;
+    font-size:calc(5px + 1.5vw);
+}
+
+ .PanelAbj{
+     padding-bottom:15px;
+     
+     background-color:lightblue; 
+     text-align:center;  
+     min-width:500px;
+     min-height:600px;
+ } 
+ .PanelArr{
+     padding-top:15px;
+     
+     background-color:lightblue; 
+     text-align:center;  
+     min-width:500px;
+     min-height:25px;
+ }
+p{
+    font-family:Arial;
+    font-size:calc(10px + 1.5vw);
+}
+.btnIngre{
+    background-color:#4B7CE7;
+    color:white;
+    
+    font-family:Arial;
+    font-size:calc(10px + 1.5vw);
+    
+    min-width:200px;
+    min-height:30px;
+    cursor:hand;
+    border-radius:10px;
+    
+}
+.btnRegis{
+    background-color:white;
+    color:green;
+    
+      font-family:Arial;
+    font-size:calc(10px + 1.5vw);
+    
+    min-width:150px;
+    min-height:30px;
+    cursor:hand;
+    border-radius:10px;
+}
+
+.txtfield{
+    min-width:300px;
+    min-height:40px;
+    border-radius:10px;
+    text-align:center;
+    font-family:Arial;
+    font-size:calc(12px + 1.5vw);
+}

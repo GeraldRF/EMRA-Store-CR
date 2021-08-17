@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color:white;
+	/*background-image: url("https://grfixurdivice.000webhostapp.com/recursos/Img_GUI/EMRA_Store_RosaCeleste.png");*/
+	padding-top:180px;
+}
+h1{
+    color: aqua;
+}
+
+.contenedor {
+  display:flex;
+  flex-direction: row;
+  min-height:100%;
+}
+
+.contenedor > div {
+  flex:1;
+  display:flex;
+}
+
+.fila0 { background:rgba(0,0,0,0.3); }
+.fila1 { background:rgba(255,0,0,0.3); }
+

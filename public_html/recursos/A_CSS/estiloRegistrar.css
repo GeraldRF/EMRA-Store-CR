@@ -1,0 +1,63 @@
+ body{
+    background-color:white; 
+    	/*background-image: url("https://grfixurdivice.000webhostapp.com/recursos/Img_GUI/EMRA_Store_RosaCeleste.png");*/
+        padding-top:180px;
+     
+ }
+ 
+ .divS{
+     min-height:50px;
+     }
+     
+ .pAnim {
+  
+  font-size:calc(4px + 1.5vw);
+  margin:0 0 10px 0;
+  animation-name: temblor;
+  animation-duration: 0.25s;
+  color:red;
+}
+
+@keyframes temblor {
+  25% {
+    margin:0 3% 0 0;
+  }
+  50% {
+    margin:0 0 0 3%;
+  }
+
+  75% {
+    margin:0 3% 0 0;
+  }
+  100% {
+    margin:0 0 0 3%;
+  }
+}
+ 
+ #regisbutton {
+border-radius: 5px; 
+   font-size:calc(12px + 1.5vw);
+    min-width:130px;
+   min-height:35px;
+   
+ }
+ 
+ .txtfield{
+    min-width:300px;
+    min-height:40px;
+    border-radius:10px;
+    text-align:center;
+    font-family:Arial;
+    font-size:calc(12px + 1.5vw);
+    margin-bottom:0;
+}
+ .textA{
+     font-size:calc(12px + 1.5vw);
+     background-color: white;
+   border-radius: 5px;
+   min-width:330px;
+   min-height:4em;
+   resize:none;
+ }
+ 
+  

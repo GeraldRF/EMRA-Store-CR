@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+
+#fijo {
+    position:fixed;
+}
+
+.contenedor {
+  display:flex;
+  flex-direction: row;
+ background-color:#fff;
+ vertical-align: middle;
+}
+
+.contenedor > div {
+  flex:1;
+  display:flex;
+  
+}
+
+   #nav #menu #fijo { 
+    
+    font-family:verdana,arial; 
+            font-size:12pt; 
+            text-align:center; 
+            /*padding: 5px 0px 0px 5px;    /* margen con valores: arriba - derecha - abajo - izquierda */  
+            top: 0px;                    /* Distancia hasta el borde superior */ 
+            left: 0px;            /* Distancia hasta el borde izquierdo */
+        min-width:100%; 
+        z-index: 1;               /* hace que la capa sea opaca  */ 
+} 
+
+#boton_trasp{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+    outline:none;
+    min-height:30px;
+    font-family: Lato, sans-serif;
+    font-size:calc(5px + 1.5vw);
+    line-height: 1.5;
+}
+#ini{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+    outline:none;
+    color:black;
+}
+
+#boton_trasp:hover {
+ color:white; 
+ 
+  transition-property: background-color;
+  transition-duration: 0.15s;
+  transition-delay: 0.1s;
+  background-color: #080070;
+}
+#ini:hover{
+ color:black;
+ background-color: lightblue;
+}
+
+.redondo {
+      border-radius: 5px; 
+}
+
+ #bbutton {
+border-radius: 5px; 
+   font-size:20px;
+    min-width:80px;
+   min-height:30px;
+   
+ }
+ 
+ #bbusca {
+   background-color: white;
+   border-radius: 10px; 
+   padding-bottom:15px;
+   font-size:calc(8px + 1.5vw);
+   min-width:250px;
+   min-height:25px;
+ }
