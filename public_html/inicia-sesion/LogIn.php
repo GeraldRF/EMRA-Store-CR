@@ -18,7 +18,7 @@
   
     <div class="PanelAbj" align="center"> 
   <br>
-  <div style="margin-top:10px; padding-top:10px; min-width=150px min-height=150px"><img src="https://grfixurdivice.000webhostapp.com/recursos/Img_GUI/persona.ico"></div>
+  <div style="margin-top:10px; padding-top:10px; min-width:150px; min-height:150px"><img src="https://grfixurdivice.000webhostapp.com/recursos/Img_GUI/persona.ico"></div>
      
     <br><div><input id="user" class="txtfield" type="text" placeholder="Numero telefonico" onkeyup="verificar()"></div> 
     <div id="resultado" class="msgErr"></div>
