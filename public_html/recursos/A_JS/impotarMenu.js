@@ -1,5 +1,8 @@
-  var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://grfixurdivice.000webhostapp.com/recursos/A_HTML/menu.html');
+ // https://grfixurdivice.000webhostapp.com
+ var server = "http://localhost:3000/public_html"
+
+ var xhr = new XMLHttpRequest();
+        xhr.open('POST', server+'/recursos/A_HTML/menu.php');
         xhr.setRequestHeader('Content-Type', 'text/plain');
         xhr.send();
         xhr.onload = function (data) {

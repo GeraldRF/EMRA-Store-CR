@@ -1,12 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
 
+<!--- https://grfixurdivice.000webhostapp.com | < ?php echo $server; ?> -->
+<?php $server = "http://localhost:3000/public_html"; ?>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://grfixurdivice.000webhostapp.com/recursos/A_JS/impotarMenu.js"></script>
-<script src="https://grfixurdivice.000webhostapp.com/recursos/A_JS/accionesMenu.js"></script>
-
-
+<script src="<?php echo $server; ?>/recursos/A_JS/impotarMenu.js"></script>
+<script src="<?php echo $server; ?>/recursos/A_JS/accionesMenu.js"></script>
 
 <meta charset="UTF-8">
 
