@@ -1,13 +1,16 @@
 function redirec(cual){
-    var url="";
+  // https://grfixurdivice.000webhostapp.com
+ var server = "http://localhost:3000/public_html"
+  
+  var url="";
   
   if(cual=="sesion"){
-      url="https://grfixurdivice.000webhostapp.com/recursos/A_PHP/LogIn.php";
+      url=server+"/inicia-sesion";
   } else if(cual=="inicio"){
-     url="https://grfixurdivice.000webhostapp.com";
+     url=server;
   
     }else if(cual=="nuevo"){
-      url="https://grfixurdivice.000webhostapp.com/recursos/A_HTML/Registrarse.html";
+      url=server+"/registrarse";
    
     }else if(cual=="destacado"){
         url="";
