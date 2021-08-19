@@ -3,7 +3,7 @@
 <head>
 
   <!--- https://grfixurdivice.000webhostapp.com | < ?php echo $server; ?> -->
-  <?php $server = "http://localhost:3000/public_html"; ?>
+  <?php $server = "http://localhost:3000"; ?>
 
   <link rel="stylesheet" href="<?php echo $server; ?>/recursos/A_CSS/estiloRegistrar.css">
 
@@ -22,12 +22,12 @@
 
 <body>
   <header>
-    <?php require_once('../recursos/A_HTML/menu.php'); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/recursos/menu/menu.php'); ?>
   </header>
 
-  <div style="align-content: center;">
+  <div text-align="center">
 
-    <form action="<?php echo $server; ?>/recursos/A_PHP/leerNuevoRegistroPostgres.php" method="post">
+    <form action="<?php echo $server; ?>/recursos/A_PHP/leerNuevoRegistro.php" method="post">
 
       <h1>LLene los datos solicitados para completar el registro</h1>
       <br>

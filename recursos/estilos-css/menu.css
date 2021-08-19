@@ -29,58 +29,31 @@
         z-index: 1;               /* hace que la capa sea opaca  */ 
 } 
 
-#boton_trasp{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;  
-    outline:none;
-    min-height:30px;
-    font-family: Lato, sans-serif;
-    font-size:calc(5px + 1.5vw);
-    line-height: 1.5;
-}
-#ini{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;  
-    outline:none;
-    color:black;
+.btn-registrar{
+  background-color: transparent !important;
+  border: solid rgb(186, 186, 252) 0.5px !important;
+  color: rgb(149, 149, 218) !important;
 }
 
-#boton_trasp:hover {
- color:white; 
- 
+.btn-iniciar-sesion{
+  background-color: rgb(186, 186, 252) !important;
+  color:white !important;
+}
+
+.btn-menu{
+  font-size: large;
+}
+.btn-menu:hover {
+  color:white !important; 
   transition-property: background-color;
   transition-duration: 0.15s;
   transition-delay: 0.1s;
-  background-color: #080070;
+  background-color: rgb(149, 149, 218);
+ 
 }
-#ini:hover{
- color:black;
- background-color: lightblue;
-}
+
+
 
 .redondo {
       border-radius: 5px; 
 }
-
- #bbutton {
-border-radius: 5px; 
-   font-size:20px;
-    min-width:80px;
-   min-height:30px;
-   
- }
- 
- #bbusca {
-   background-color: white;
-   border-radius: 10px; 
-   padding-bottom:15px;
-   font-size:calc(8px + 1.5vw);
-   min-width:250px;
-   min-height:25px;
- }

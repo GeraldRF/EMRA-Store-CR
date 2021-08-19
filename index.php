@@ -3,12 +3,10 @@
 <head>
 
 	<!--- https://grfixurdivice.000webhostapp.com | < ?php echo $server; ?> -->
-	<?php $server = "http://localhost:3000/public_html"; ?>
+	<?php $server = "http://localhost:3000"; ?>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="<?php echo $server; ?>/recursos/A_JS/impotarMenu.js"></script>
-	<script src="<?php echo $server; ?>/recursos/A_JS/accionesMenu.js"></script>
-
+	
 	<meta charset="UTF-8">
 
 	<title>EMRA Store CR</title>
@@ -19,7 +17,7 @@
 <body>
 
 	<header>
-	<?php include($_SERVER['DOCUMENT_ROOT'].'/public_html/recursos/A_HTML/menu.php'); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/shared/menu/menu.php'); ?>
 	</header>
 
 	<div style="margin-top:100px">

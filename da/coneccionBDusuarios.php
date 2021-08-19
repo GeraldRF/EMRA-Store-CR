@@ -1,4 +1,3 @@
-
 <?php
 $servername = "localhost";
 $database = "id16433138_usuarios";

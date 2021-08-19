@@ -2,7 +2,7 @@
 
  <head>
    <!--- https://grfixurdivice.000webhostapp.com -->
-   <?php $server = "http://localhost:3000/public_html"; ?>
+   <?php $server = "http://localhost:3000"; ?>
    <link rel="stylesheet" href="<?php echo $server; ?>/recursos/A_CSS/LogIn.css">
    <title>Ingresar a cuenta</title>
 
@@ -11,13 +11,13 @@
 
  <body>
 
-   <div align="center">
+   <div text-align="center">
 
      <div class="PanelArr">
        <a href="<?php echo $server; ?>" style="margin:0 380px 5px 0;"> <img src="<?php echo $server; ?>/recursos/Img_GUI/flecha2.ico" width=70px height=70px></a>
      </div>
     
-     <div class="PanelAbj" align="center">
+     <div class="PanelAbj" text-align="center">
        <br>
 
        <div style="margin-top:10px; padding-top:10px; min-width:150px; min-height:150px"><img src="<?php echo $server; ?>/recursos/Img_GUI/persona.ico"></div>
