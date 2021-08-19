@@ -33,26 +33,42 @@
   background-color: transparent !important;
   border: solid rgb(186, 186, 252) 0.5px !important;
   color: rgb(149, 149, 218) !important;
+  min-width: 100%;
 }
 
 .btn-iniciar-sesion{
   background-color: rgb(186, 186, 252) !important;
   color:white !important;
+  min-width: 100%;
 }
 
 .btn-menu{
   font-size: large;
+  color: rgb(186, 186, 252) !important;
 }
-.btn-menu:hover {
-  color:white !important; 
-  transition-property: background-color;
-  transition-duration: 0.15s;
-  transition-delay: 0.1s;
-  background-color: rgb(149, 149, 218);
- 
+
+a > img {
+  display: block;
+}
+a:hover > img{
+  display: none;
+}
+a > p {
+  display: none;
+}
+a:hover > p{
+  display: block;
 }
 
 
+
+.contenedor-busqueda {
+  border: solid rgb(108, 108, 189) 0.6px !important;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 100px !important;
+  margin-left: 100px !important;
+}
 
 .redondo {
       border-radius: 5px; 
