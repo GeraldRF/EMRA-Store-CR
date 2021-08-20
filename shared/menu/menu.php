@@ -12,20 +12,34 @@
     window.onload = resize;
 
     function resize() {
-      var textos = ["Inicio", "Destacados", "Carrito", "Favoritos"];
+
+      var carro = "<a class='carrito' href='<?php echo $server; ?>''><img style='max-width: 70px;' src='<?php echo $server; ?>/recursos/imagenes/img-ui/Carrito.png'></a>";
+
       if (document.body.clientWidth < 991) {
 
-        textos.forEach(Element => {
-          var div = document.getElementById('texto-' + Element).innerHTML = "<div><img src='<?php $server ?>/recursos/imagenes/img-ui/" + Element + ".png' style='max-width: 50px;'></div>" +
-            "<div><p style='display:block'><strong>" + Element + "</strong></p></div>";
-        });
+        document.getElementById('Logo').style.maxWidth="400px";
+        document.getElementById('Logo').style.maxHeight="100px";
+
+       var menus = document.getElementsByClassName('btn-menu');
+       for(var i=0; i<4; i++){
+         menus[i].style.marginTop = "15px";
+         menus[i].style.fontSize = "x-large"
+       }
+
+        var div = document.getElementById('Carrito').innerHTML = "<div class='col' style='align-self: center; position: fixed; top:30px; left: 60%;'>" + carro + "</div>";
 
       } else {
+        document.getElementById('Logo').style.maxWidth="240px";
+        document.getElementById('Logo').style.maxHeight="70px";
+     
+        var menus = document.getElementsByClassName('btn-menu');
 
-        textos.forEach(Element => {
-          var div = document.getElementById('texto-' + Element).innerHTML = "<div><img src='<?php $server ?>/recursos/imagenes/img-ui/" + Element + ".png' style='max-width: 50px;'></div>" +
-            "<div><p><strong>" + Element + "</strong></p></div>";
-        });
+       for(var i=0; i<4; i++){
+         menus[i].style.marginTop = "0px";
+         menus[i].style.fontSize = "large"
+       }
+
+        var div = document.getElementById('Carrito').innerHTML = "<div class='col' style='align-self: center; position: fixed; top:17px; left: 89%;''>" + carro + "</div>";
 
       }
 
@@ -34,53 +48,57 @@
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
   <div class="navbar-brand">
     <!--- EMRA-Store-CR-Logo.png -->
-    <img src="<?php echo $server; ?>/recursos/imagenes/img-ui/Logo.png" style="margin-right:25px; max-width:220px; max-height:70px;">
+    <img id="Logo" src="<?php echo $server; ?>/recursos/imagenes/img-ui/Logo.png" style="margin-right:25px; max-width:240px; max-height:70px;">
   </div>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="min-width:100px;">
-    <img src="<?php echo $server; ?>/recursos/imagenes/img-ui/menu.png" style="max-width:60px">
-  </button>
+  <div style="justify-content: end;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="min-width:100px;">
+      <img src="<?php echo $server; ?>/recursos/imagenes/img-ui/menu.png" style="max-width:60px">
+    </button>
+
+    <div id="Carrito" style="justify-content: end;"></div>
+
+  </div>
   <div class="collapse navbar-collapse row" id="navbarSupportedContent">
     <div class="row" style="max-width: max-content;">
-      <div class="col" style="align-self: center;">
-        <a id="texto-Inicio" class="nav-link btn-menu justify-content-center" href="<?php echo $server; ?>"> </a>
+      <div class="col col-lg-auto" style="align-self: center;">
+        <a id="texto-menu" class="nav-link btn-menu justify-content-center" href="<?php echo $server; ?>"><strong>Inicio</strong></a>
       </div>
-      <div class="col" style="align-self: center;">
-        <a id="texto-Destacados" class="nav-link btn-menu" href="<?php echo $server; ?>"> </a>
+      <div class="col col-lg-auto" style="align-self: center;">
+        <a id="texto-menu" class="nav-link btn-menu" href="<?php echo $server; ?>"><strong>Destacado</strong></a>
       </div>
-      <div class="col" style="align-self: center;">
-        <a id="texto-Carrito" class="nav-link btn-menu" href="<?php echo $server; ?>"> </a>
+      <div class="col col-lg-auto" style="align-self: center;">
+        <a id="texto-menu" class="nav-link btn-menu" href="<?php echo $server; ?>"><strong>Categorias</strong></a>
       </div>
-      <div class="col" style="align-self: center;">
-        <a id="texto-Favoritos" class="nav-link btn-menu justify-content-center"" href=" <?php echo $server; ?>"> </a>
+      <div class="col col-lg-auto" style="align-self: center;">
+        <a id="texto-menu" class="nav-link btn-menu" href=" <?php echo $server; ?>"><strong>Tus favoritos</strong> </a>
       </div>
     </div>
 
   </div>
+
 </nav>
 
-<nav class="navbar navbar-light bg-light" style="max-height: 60px; display: flex;
-    flex-direction: column;">
-
-  <div class="navbar-nav" style="min-width: 60%; " align-self:center; margin-left:20px">
-    <form class="nav-item row " >
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" style="max-height: 40px"><img src="<?php echo $server; ?>/recursos/imagenes/img-ui/lupa.png" style="max-width: 30px; margin:4px"></span>
+<nav class="navbar navbar-light bg-light " style="max-height: 100px;">
+  <div style="min-width: 30%; align-self:center; margin-left:20px">
+    <div class="row" id="busca">
+      <form class="nav-item row ">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="max-height: 40px"><img src="<?php echo $server; ?>/recursos/imagenes/img-ui/lupa.png" style="max-width: 30px; margin:4px"></span>
+          </div>
+          <input type="text" class="form-control" placeholder="¿Qué buscas?" aria-label="Search" style="max-height:40px;">
         </div>
-        <input type="text" class="form-control" placeholder="¿Qué buscas?" aria-label="Search" style="max-height:40px;">
-      </div>
-    </form>
-  </div>
-
-  <div class="navbar-nav row" style="align-content: center; align-items: center; ">
-    <div class="nav-item col-md-auto">
-      <!--- <img src="< ?php echo $server; ?>/recursos/imagenes/img_ui/persona.ico" style="vertical-align:middle; max-width:50px;"> -->
-      <a class="btn btn-iniciar-sesion " href="<?php echo $server; ?>/ui/inicia-sesion"><strong>Mi cuenta</strong></a>
+      </form>
     </div>
-
+  </div>
+  <div style="justify-content: end;">
+    <div style="align-content: center; align-items: center; ">
+      <!--- <img src="< ?php echo $server; ?>/recursos/imagenes/img_ui/persona.ico" style="vertical-align:middle; max-width:50px;"> -->
+      <a class="btn btn-iniciar-sesion " style="align-items: center;" title="Carrito" href="<?php echo $server; ?>/ui/inicia-sesion"><img style="max-width: 55px;" src="<?php $server ?>/recursos/imagenes/img-ui/persona.png"><strong>Tu cuenta</strong></a>
+    </div>
   </div>
 </nav>

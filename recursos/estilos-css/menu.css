@@ -30,22 +30,34 @@
 } 
 
 .btn-iniciar-sesion{
-  background-color: rgb(186, 186, 252) !important;
+  background-color: transparent !important;
+  color:rgb(24, 23, 23) !important;
+  margin-right: 20px;
+  max-height: 50px;
+}
+.btn-iniciar-sesion:hover{
+  border: 0.5px solid rgb(24, 23, 23);
+}
+
+.carrito::target-text{
   color:white !important;
-  margin-right: 40px;
 }
 
 .btn-menu{
+  max-height: 40px;
   font-size: large;
-  color: rgb(186, 186, 252) !important;
+  color: #fff !important;
+}
+.btn-menu:hover{
+  border: 0.5px solid #fff !important;
 }
 
 a > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-a > div > img {
+/* a > div > img {
   display: block;
   text-align: center;
   align-self: center;
@@ -64,7 +76,7 @@ a:hover > div > p {
   display: block;
   text-align: center;
   align-self: center;
-}
+} */
 
 .contenedor-busqueda {
   border: solid rgb(108, 108, 189) 0.6px !important;
