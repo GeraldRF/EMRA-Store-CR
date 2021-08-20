@@ -29,17 +29,10 @@
         z-index: 1;               /* hace que la capa sea opaca  */ 
 } 
 
-.btn-registrar{
-  background-color: transparent !important;
-  border: solid rgb(186, 186, 252) 0.5px !important;
-  color: rgb(149, 149, 218) !important;
-  min-width: 100%;
-}
-
 .btn-iniciar-sesion{
   background-color: rgb(186, 186, 252) !important;
   color:white !important;
-  min-width: 100%;
+  margin-right: 40px;
 }
 
 .btn-menu{
@@ -47,27 +40,41 @@
   color: rgb(186, 186, 252) !important;
 }
 
-a > img {
-  display: block;
-}
-a:hover > img{
-  display: none;
-}
-a > p {
-  display: none;
-}
-a:hover > p{
-  display: block;
+a > div {
+  display: flex;
+  flex-direction: column;
 }
 
-
+a > div > img {
+  display: block;
+  text-align: center;
+  align-self: center;
+}
+a:hover > div > img {
+  display: none;
+  text-align: center;
+  align-self: center;
+}
+a > div > p {
+  display: none;
+  text-align: center;
+  align-self: center;
+}
+a:hover > div > p {
+  display: block;
+  text-align: center;
+  align-self: center;
+}
 
 .contenedor-busqueda {
   border: solid rgb(108, 108, 189) 0.6px !important;
   text-align: center;
+  align-content: center;
   border-radius: 5px;
-  margin-right: 100px !important;
-  margin-left: 100px !important;
+  min-width: 100px;
+}
+input::placeholder {
+color: white;
 }
 
 .redondo {
