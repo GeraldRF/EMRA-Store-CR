@@ -7,44 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    window.onresize = resize;
-    window.onload = resize;
-
-    function resize() {
-
-      var carro = "<a class='carrito' href='<?php echo $server; ?>''><img style='max-width: 70px;' src='<?php echo $server; ?>/recursos/imagenes/img-ui/Carrito.png'></a>";
-
-      if (document.body.clientWidth < 991) {
-
-        document.getElementById('Logo').style.maxWidth="400px";
-        document.getElementById('Logo').style.maxHeight="100px";
-
-       var menus = document.getElementsByClassName('btn-menu');
-       for(var i=0; i<4; i++){
-         menus[i].style.marginTop = "15px";
-         menus[i].style.fontSize = "x-large"
-       }
-
-        var div = document.getElementById('Carrito').innerHTML = "<div class='col' style='align-self: center; position: fixed; top:30px; left: 60%;'>" + carro + "</div>";
-
-      } else {
-        document.getElementById('Logo').style.maxWidth="240px";
-        document.getElementById('Logo').style.maxHeight="70px";
-     
-        var menus = document.getElementsByClassName('btn-menu');
-
-       for(var i=0; i<4; i++){
-         menus[i].style.marginTop = "0px";
-         menus[i].style.fontSize = "large"
-       }
-
-        var div = document.getElementById('Carrito').innerHTML = "<div class='col' style='align-self: center; position: fixed; top:17px; left: 89%;''>" + carro + "</div>";
-
-      }
-
-    }
-  </script>
+  <?php include($_SERVER['DOCUMENT_ROOT']."/shared/menu/conf-size.php"); ?>
 
 </head>
 
@@ -59,7 +22,8 @@
       <img src="<?php echo $server; ?>/recursos/imagenes/img-ui/menu.png" style="max-width:60px">
     </button>
 
-    <div id="Carrito" style="justify-content: end;"></div>
+    <div id="Carrito"></div>
+    <div id="Sesion"></div>
 
   </div>
   <div class="collapse navbar-collapse row" id="navbarSupportedContent">
@@ -83,7 +47,7 @@
 </nav>
 
 <nav class="navbar navbar-light bg-light " style="max-height: 100px;">
-  <div style="min-width: 30%; align-self:center; margin-left:20px">
+  <div id="barra-busqueda" style="min-width: 45%; align-self:center; margin-left:20px;">
     <div class="row" id="busca">
       <form class="nav-item row ">
         <div class="input-group">
@@ -98,7 +62,7 @@
   <div style="justify-content: end;">
     <div style="align-content: center; align-items: center; ">
       <!--- <img src="< ?php echo $server; ?>/recursos/imagenes/img_ui/persona.ico" style="vertical-align:middle; max-width:50px;"> -->
-      <a class="btn btn-iniciar-sesion " style="align-items: center;" title="Carrito" href="<?php echo $server; ?>/ui/inicia-sesion"><img style="max-width: 55px;" src="<?php $server ?>/recursos/imagenes/img-ui/persona.png"><strong>Tu cuenta</strong></a>
+      <span><?php $_SERVER['PHP_AUTH_USER']="Gerald"; echo $_SERVER['PHP_AUTH_USER'].""; ?></span>
     </div>
   </div>
 </nav>
