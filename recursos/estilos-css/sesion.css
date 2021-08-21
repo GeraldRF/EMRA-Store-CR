@@ -21,7 +21,8 @@
     
     .btn-iniciar:hover {
         background-color: rgb(26, 26, 26);
-        color: #fff max-width: 300px;
+        color: #fff;
+        max-width: 300px;
     }
     
     .advertencia {
