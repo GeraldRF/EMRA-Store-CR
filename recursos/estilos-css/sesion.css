@@ -1,75 +1,38 @@
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    min-height: 30;
-}
-
-.hrvertical {
-    border: none;
-    border-left: 1px solid hsla(200, 10%, 50%, 100);
-    height: 100vh;
-    width: 1px;
-}
-
-.contenedor>div {
-    flex: 1;
-    display: flex;
-}
-
-.msgErr {
-    text-align: center;
-    color: red;
-    font-size: calc(5px + 1.5vw);
-}
-
-.PanelAbj {
-    padding-bottom: 15px;
-    background-color: lightblue;
-    text-align: center;
-    min-width: 500px;
-    min-height: 600px;
-}
-
-.PanelArr {
-    padding-top: 15px;
-    background-color: lightblue;
-    text-align: center;
-    min-width: 500px;
-    min-height: 25px;
-}
-
-p {
-    font-family: Arial;
-    font-size: calc(10px + 1.5vw);
-}
-
-.btnIngre {
-    background-color: #4B7CE7;
-    color: white;
-    font-family: Arial;
-    font-size: calc(10px + 1.5vw);
-    min-width: 200px;
-    min-height: 30px;
-    cursor: hand;
-    border-radius: 10px;
-}
-
-.btnRegis {
-    background-color: white;
-    color: green;
-    font-family: Arial;
-    font-size: calc(10px + 1.5vw);
-    min-width: 150px;
-    min-height: 30px;
-    cursor: hand;
-    border-radius: 10px;
-}
-
-.txtfield {
-    min-width: 300px;
-    min-height: 40px;
-    border-radius: 10px;
-    text-align: center;
-    font-family: Arial;
-    font-size: calc(12px + 1.5vw);
-}
+    .hrvertical {
+        border: none;
+        border-left: 1px solid hsla(200, 10%, 50%, 100);
+        height: 100vh;
+        width: 1px;
+    }
+    
+    .formulario {
+        font-size: x-large;
+        margin-top: 30px !important;
+        min-width: 300px;
+    }
+    
+    .btn-iniciar {
+        border: solid 0.5px rgb(26, 26, 26);
+        background-color: transparent;
+        color: rgb(26, 26, 26);
+        max-width: 300px;
+        margin-top: 25px;
+    }
+    
+    .btn-iniciar:hover {
+        background-color: rgb(26, 26, 26);
+        color: #fff max-width: 300px;
+    }
+    
+    .advertencia {
+        color: rgba(194, 9, 9, 0.747);
+    }
+    
+    .vl {
+        border-left: 0.5px solid rgb(54, 54, 54);
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 25%;
+    }
