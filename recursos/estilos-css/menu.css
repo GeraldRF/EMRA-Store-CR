@@ -1,8 +1,4 @@
 @charset "ISO-8859-1";
-#fijo {
-    position: fixed;
-}
-
 .contenedor {
     display: flex;
     flex-direction: row;
@@ -90,4 +86,8 @@ a:hover > div > p {
 
 .redondo {
     border-radius: 5px;
+}
+
+.sombra-nav {
+    box-shadow: 2px 2px 5px #666;
 }

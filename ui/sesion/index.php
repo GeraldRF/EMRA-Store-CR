@@ -7,7 +7,6 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-   <?php include($_SERVER['DOCUMENT_ROOT'] . "/shared/menu/conf-size.php"); ?>
 
    <title>Ingresar a cuenta</title>
 
@@ -18,38 +17,45 @@
    <header>
      <?php include($_SERVER['DOCUMENT_ROOT'] . '/shared/menu/menu.php'); ?>
    </header>
+<div style="display:flex; justify-content: center;">
+   <div id="contenedor" class="sombra-div">
 
-   <div class="row" style="justify-content: center; min-width:100%; margin-top: 40px; background-color: rgba(243, 243, 243, 0.76);">
-
-     <div class="col-5">
+     <div>
        <div style="text-align: center;">
          Iniciar sesion
        </div>
+       
+      <div>
+        <?php
+          if(isset($_GET['sesion'])){
+          if($_GET['sesion']=="no-encontrada"){
+            echo "<p><span style='color:red; font-size:large;'>*</span> La cuenta no existe</p>";
+          }else if($_GET['sesion']=="incorrecta"){
+            echo "<p><span style='color:red; font-size:large;'>*</span>Contraseña incorrecta</p>";
+          }
+          } 
+        ?>
+      </div>
 
        <div>
-         <form method="POST">
-           <div style="display: flex; flex-direction: column; align-items: center;">
-             <input type="text" id="user" onkeyup="verificar()" placeholder="Numero telefonico">
+         <form action="<?php echo $server; ?>/controllers/sesion/iniciar-sesion.php" method="post" style="display: flex; flex-direction: column; align-items: center;">
+         
+             <input type="text" id="user" name="user" onkeyup="verificar()" placeholder="Numero telefonico">
              <div id="resultado"></div>
-             <input type="password" placeholder="Contraseña">
-             <button class="btn-iniciar" type="submit">Iniciar sesión</button>
-           </div>
+             <input type="password" id="pass" name="pass" placeholder="Contraseña">
+             <input class="btn-iniciar" type="submit" values="Iniciar sesión">
+          
          </form>
        </div>
 
      </div>
-
-     <div class="col-1 ">
-       <div class="vl"></div>
-     </div>
-
-     <div class="col-5">
+     <div>
        <div>¿No tiene cuenta? Registrese</div>
      </div>
 
    </div>
 
-
+</div>
 
  </body>
 
