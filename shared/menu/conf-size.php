@@ -4,10 +4,10 @@ window.onload = resize;
 
 function resize() {
 
-  var carro = "<a class='carrito' title='Carrito' href='/'><img style='max-width: 70px; margin-right:15px' src='/recursos/imagenes/img-ui/Carrito.png'></a>";
+  var carro = "<a class='carrito' title='Carrito' href='<?php echo $server; ?>''><img style='max-width: 70px; margin-right:15px' src='<?php echo $server; ?>/recursos/imagenes/img-ui/Carrito.png'></a>";
 
   var sesion = "<a style='align-items: center;' title='Mi cuenta'" +
-    "href='/ui/sesion'><img style='max-width: 70px;' src='/recursos/imagenes/img-ui/persona.png'></a>"
+    "href='<?php echo $server; ?>/ui/sesion'><img style='max-width: 70px;' src='<?php echo $server; ?>/recursos/imagenes/img-ui/persona.png'></a>"
 
     var logoMaxWidth, logoMinWidth
     ,menusMarginTop,menusFontSize,carritoInnerHTML,sesionInnerHTML;

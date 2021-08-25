@@ -1,5 +1,5 @@
 <!--- https://grfixurdivice.000webhostapp.com | <n?php echo $server; ?> -->
-<?php $server = "http://localhost:3000";
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/servidor.php");
 session_start();
 ?>
 
@@ -7,8 +7,8 @@ session_start();
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/recursos/estilos-css/menu.css">
-  <link rel="stylesheet" href="/recursos/estilos-css/dropdown-menu.css">
+  <link rel="stylesheet" href="<?php echo $server; ?>/recursos/estilos-css/menu.css">
+  <link rel="stylesheet" href="<?php echo $server; ?>/recursos/estilos-css/dropdown-menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -25,7 +25,7 @@ session_start();
     <div style="max-width: 25%;">
       <div class="navbar-brand">
         <!--- EMRA-Store-CR-Logo.png -->
-        <img id="Logo" src="/recursos/imagenes/img-ui/Logo.png" style="margin-right:25px; max-width:240px; max-height:70px;">
+        <img id="Logo" src="<?php echo $server; ?>/recursos/imagenes/img-ui/Logo.png" style="margin-right:25px; max-width:240px; max-height:70px;">
       </div>
     </div>
 
@@ -37,19 +37,18 @@ session_start();
         <div id="SesionP1"></div>
 
         <button style="outline: none; " class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="/recursos/imagenes/img-ui/menu.png" style="max-width:75px">
+          <img src="<?php echo $server; ?>/recursos/imagenes/img-ui/menu.png" style="max-width:75px">
         </button>
       </div>
     </div>
-
     <div style="min-width: 75%; display: flex;">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div style="max-width: max-content; display:contents">
           <div style="align-self: center;">
-            <a id="texto-menu" class="nav-link btn-menu justify-content-center" href="/"><strong>Inicio</strong></a>
+            <a id="texto-menu" class="nav-link btn-menu justify-content-center" href="<?php echo $server; ?>"><strong>Inicio</strong></a>
           </div>
           <div style="align-self: center;">
-            <a id="texto-menu" class="nav-link btn-menu" href=""><strong>Destacado</strong></a>
+            <a id="texto-menu" class="nav-link btn-menu" href="<?php echo $server; ?>/ui/sesion"><strong>Destacado</strong></a>
           </div>
           <div class="dropdown show" style="align-self: center;">
             <a class="nav-link btn-menu dropbtn" style="display: flex; justify-items: center;">
@@ -57,13 +56,13 @@ session_start();
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="/">Caballeros</a>
-              <a href="/">Damas</a>
-              <a href="/">Niños</a>
+              <a href="<?php echo $server; ?>">Caballeros</a>
+              <a href="#">Damas</a>
+              <a href="#">Niños</a>
             </div>
           </div>
           <div style="align-self: center;">
-            <a id="texto-menu" class="nav-link btn-menu" href="/"><strong>Tus favoritos</strong> </a>
+            <a id="texto-menu" class="nav-link btn-menu" href=" <?php echo $server; ?>"><strong>Tus favoritos</strong> </a>
           </div>
         </div>
 
@@ -105,7 +104,7 @@ session_start();
         </div>
 
         <div style="display: flex;">
-          <img style="max-width: 40px; max-height:40px; margin-right: 5px;" src="/recursos/imagenes/img-ui/Lupa.png">
+          <img style="max-width: 40px; max-height:40px; margin-right: 5px;" src="<?php echo $server; ?>/recursos/imagenes/img-ui/Lupa.png">
           <form style="min-width: 90%;" id="barra-busqueda">
             <input type="text" style="min-width: 100%; min-height: 40px; font-size: x-large; border:none; border-bottom:solid 0.5px black; outline: none;" placeholder="¿Qué buscas?">
           </form>

@@ -1,6 +1,5 @@
 <?php 
-//https://grfixurdivice.000webhostapp.com | <n?php echo $server; 
-$server = "http://localhost:3000";
+include($_SERVER['DOCUMENT_ROOT'] . "/servidor.php");
  
 $user = $_POST["user"];
 $pass = $_POST["pass"];
@@ -21,16 +20,16 @@ if($row_cnt != 0){
 mysqli_close($conn);
 
 if($row_cnt == 0){
-    echo "<script>window.location.href='".$server."/ui/sesion/index.php?sesion=no-encontrada'</script>";
+    echo "<script>window.location.href='/ui/sesion/index.php?sesion=no-encontrada'</script>";
 } else {
    
     if($validPassword == $pass){
-        echo "<script>window.location.href='".$server."'</script>";
+        echo "<script>window.location.href='/'</script>";
         session_start();
         $_SESSION["USER"] = $validUser;
         $_SESSION["UltimoAcceso"] = date("Y-n-j H:i:s");
     }else {
-        echo "<script>window.location.href='".$server."/ui/sesion/index.php?sesion=incorrecta'</script>";
+        echo "<script>window.location.href='/ui/sesion/index.php?sesion=incorrecta'</script>";
     }
 
 }
