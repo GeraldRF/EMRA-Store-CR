@@ -4,33 +4,33 @@ window.onload = resize;
 
 function resize() {
 
-  var carro = "<a class='carrito' title='Carrito' href='<?php echo $server; ?>''><img style='max-width: 70px; margin-right:15px' src='<?php echo $server; ?>/recursos/imagenes/img-ui/Carrito.png'></a>";
+  var carro = "<a class='carrito' title='Carrito' href='<?php echo $server; ?>''><img style='max-width: 60px; margin-right:15px' src='<?php echo $server; ?>/recursos/imagenes/img-ui/Carrito.png'></a>";
 
   var sesion = "<a style='align-items: center;' title='Mi cuenta'" +
-    "href='<?php echo $server; ?>/ui/sesion'><img style='max-width: 70px;' src='<?php echo $server; ?>/recursos/imagenes/img-ui/persona.png'></a>"
+    "href='<?php echo $server; ?>/ui/sesion'><img style='max-width: 50px;' src='<?php echo $server; ?>/recursos/imagenes/img-ui/persona.png'></a>"
 
     var logoMaxWidth, logoMinWidth
     ,menusMarginTop,menusFontSize,carritoInnerHTML,sesionInnerHTML;
 
-  if (document.body.clientWidth < 991) {
+  // if (document.body.clientWidth < 991) {
 
-    logoMaxWidth = "400px";
-    logoMinWidth = "100px";
-    menusMarginTop = "15px";
-    menusFontSize = "x-large";
-    carritoInnerHTML = "<div style='align-self: center;'>" + carro + "</div>";
-    sesionInnerHTML = "<div style='align-self: center;'>" + sesion + "</div>";
+  //   logoMaxWidth = "400px";
+  //   logoMinWidth = "100px";
+  //   menusMarginTop = "15px";
+  //   menusFontSize = "x-large";
+  //   carritoInnerHTML = "<div style='align-self: center;'>" + carro + "</div>";
+  //   sesionInnerHTML = "<div style='align-self: center;'>" + sesion + "</div>";
     
-  } else {
+  // } else {
     
-    logoMaxWidth = "240px";
-    logoMinWidth = "70px";
+    logoMaxWidth = "310px";
+    logoMinWidth = "90px";
     menusMarginTop = "0px";
     menusFontSize = "large";
     carritoInnerHTML = "<div style='align-self: center;'>" + carro + "</div>";
     sesionInnerHTML = "<div style='align-self: center;'>" + sesion + "</div>";
 
-  }
+ // }
 
   document.getElementById('Logo').style.maxWidth = logoMaxWidth;
   document.getElementById('Logo').style.maxHeight = logoMinWidth;
