@@ -1,4 +1,3 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/3cc8fae7-c475-464b-bea5-0564bbb52bdb/resourceGroups/EMRA-Store-CR/providers/Microsoft.Web/sites/emra-store-cr",
     "appService.deploySubpath": "."
 }
