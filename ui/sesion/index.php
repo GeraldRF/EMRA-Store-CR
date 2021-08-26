@@ -13,7 +13,7 @@
  </head>
 
  <body>
-n
+
     <header>
      <?php include($_SERVER['DOCUMENT_ROOT'] . '/shared/menu/menu.php'); ?>
    </header>
