@@ -1,96 +1,69 @@
- <html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/shared/menu/menu.php'); ?>
 
- <head>
-   <?php include($_SERVER['DOCUMENT_ROOT'] . "/servidor.php"); ?>
-   <link rel="stylesheet" href="/recursos/estilos-css/sesion.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<html>
 
+<head>
+  <script src="<?php echo $server; ?>/ui/sesion/validacion.js"></script>
+  <link rel="stylesheet" href="/recursos/estilos-css/sesion.css">
+  <title>Tu sesión</title>
+</head>
 
-   <title>Ingresar a cuenta</title>
+<body>
+  <div style="display:flex; justify-content: center;">
+    <div id="contenedor" class="sombra-div">
 
+      <div class="contenedor-form">
+        <h5 style="text-align: center;">
+          Iniciar sesion
+        </h5>
 
- </head>
-
- <body>
-
-    <header>
-     <?php include($_SERVER['DOCUMENT_ROOT'] . '/shared/menu/menu.php'); ?>
-   </header>
-
-   <div style="display:flex; justify-content: center;">
-     <div id="contenedor" class="sombra-div">
-
-       <div>
-         <div style="text-align: center;">
-           Iniciar sesion
-         </div>
-
-         <div>
-           <?php
-            if (isset($_GET['sesion'])) {
-              if ($_GET['sesion'] == "no-encontrada") {
-                echo "<p><span style='color:red; font-size:large;'>*</span> La cuenta no existe</p>";
-              } else if ($_GET['sesion'] == "incorrecta") {
-                echo "<p><span style='color:red; font-size:large;'>*</span>Contraseña incorrecta</p>";
-              }
+        <div>
+          <?php
+          if (isset($_GET['sesion'])) {
+            if ($_GET['sesion'] == "no-encontrada") {
+              echo "<p><span style='color:red; font-size:large;'>*</span> La cuenta no existe</p>";
+            } else if ($_GET['sesion'] == "incorrecta") {
+              echo "<p><span style='color:red; font-size:large;'>*</span>Contraseña incorrecta</p>";
             }
-            ?>
-         </div>
+          }
+          ?>
+        </div>
 
-         <div>
-           <form action="/controllers/sesion/iniciar-sesion.php" method="post" style="display: flex; flex-direction: column; align-items: center;">
-             <input type="text" id="user" name="user" onkeyup="verificar()" placeholder="Numero telefonico">
-             <div id="resultado"></div>
-             <input type="password" id="pass" name="pass" placeholder="Contraseña">
-             <input class="btn-iniciar" type="submit" values="Iniciar sesión">
-           </form>
-         </div>
-       </div>
-      
-       <div>
-         <div>¿No tiene cuenta? Registrese</div>
-       </div>
+        <div>
+          <form action="/controllers/sesion/iniciar-sesion.php" method="post" style="display: flex; flex-direction: column; align-items: center;">
+            <input type="text" id="user" name="user" onkeyup="verificar()" placeholder="Numero telefonico">
+            <div id="resultado"></div>
+            <input type="password" id="pass" name="pass" placeholder="Contraseña">
+            <input class="btn-iniciar" type="submit" value="Iniciar sesión">
+          </form>
+        </div>
+      </div>
 
-     </div>
+      <div class="contenedor-form">
+        <h5 style="text-align: center;">¿No tiene cuenta? Registrese</h5>
+        <div>
+          <form action="<?php echo $server; ?>/controllers/sesion/iniciar-sesion.php" method="post" style="display: flex; flex-direction: column; align-items: center;">
+            <input type="text" id="user" name="user" onkeyup="verificar()" placeholder="Numero telefonico">
+            <div id="resultado"></div>
+            <input type="text" id="correo" name="correo" onkeyup="verificar()" placeholder="Correo electrónico">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <input type="text" id="p_apellido" name="p_apellido" placeholder="Primer apellido">
+            <input type="text" id="s_apellido" name="s_apellido" placeholder="Segundo apellido">
+            <div style="display:flex; flex-direction: column;">
+              Fecha de nacimiento:
+              <input type="date" id="fechaNacimiento">
+            </div>
+            <input type="password" id="pass" name="pass" placeholder="Contraseña">
+            <input type="password" id="passConf" name="passConf" placeholder="Confirme su contraseña">
+            <input class="btn-registrar" type="submit" value="Registrarse">
+          </form>
+        </div>
+      </div>
 
-   </div>
+    </div>
 
- </body>
+  </div>
 
- </html>
+</body>
 
- <script>
-   function iniciarSesion() {
-
-     window.location = "";
-
-   } //Fin function
-   function registrar() {
-     window.location = "";
-   }
-
-   function subirArchivo() {
-
-     window.location = "";
-
-   } //Fin function
- </script>
-
-
- <script>
-   function verificar() {
-     var x = document.getElementById("user");
-     var resul = "";
-
-     if (x.value !== "") {
-
-       if (isNaN(x.value)) {
-         resul = "<p class='advertencia'>Entrada valida solo para numeros.</p>";
-       } //Fin if
-
-     } //Fin if vacio
-
-     document.getElementById("resultado").innerHTML = resul;
-   } //Fin verificar
- </script>
+</html>

@@ -1,5 +1,5 @@
 
-CREATE TABLE `emra-store-cr`.`usuarios` (
+CREATE TABLE `id17488232_emra_store_cr`.`usuarios` (
   `telefono` INT(8) NOT NULL,
   `password` VARCHAR(30) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `emra-store-cr`.`usuarios` (
   `activo` TINYINT NOT NULL,
   PRIMARY KEY (`telefono`));
 
-  CREATE TABLE `emra-store-cr`.`datos-personales` (
+  CREATE TABLE `id17488232_emra_store_cr`.`datos-personales` (
   `id` VARCHAR(6) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `p-apellido` VARCHAR(45) NOT NULL,
@@ -20,17 +20,17 @@ CREATE TABLE `emra-store-cr`.`usuarios` (
   `sexo` CHAR NULL,
   PRIMARY KEY (`id`));
 
-  CREATE TABLE `emra-store-cr`.`favoritos` (
+  CREATE TABLE `id17488232_emra_store_cr`.`favoritos` (
   `id` VARCHAR(6) NOT NULL,
   `id-productos` VARCHAR(50) NULL,
   PRIMARY KEY (`id`));
 
-  CREATE TABLE `emra-store-cr`.`destacados` (
+  CREATE TABLE `id17488232_emra_store_cr`.`destacados` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id-producto` INT NOT NULL,
   PRIMARY KEY (`id`));
 
-  CREATE TABLE `emra-store-cr`.`direccion` (
+  CREATE TABLE `id17488232_emra_store_cr`.`direccion` (
   `id` VARCHAR(6) NOT NULL,
   `provincia` VARCHAR(45) NOT NULL,
   `canton` VARCHAR(45) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `emra-store-cr`.`usuarios` (
   `detalles` VARCHAR(250) NOT NULL,
   PRIMARY KEY (`id`));
 
-  CREATE TABLE `emra-store-cr`.`productos` (
+  CREATE TABLE `id17488232_emra_store_cr`.`productos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `precio` DECIMAL(10) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
@@ -50,34 +50,9 @@ CREATE TABLE `emra-store-cr`.`usuarios` (
   `cantidad-vendida` INT NULL,
   PRIMARY KEY (`id`));
 
-  CREATE TABLE `emra-store-cr`.`carrito` (
+  CREATE TABLE `id17488232_emra_store_cr`.`carrito` (
   `telefono` INT(8) NOT NULL,
   `id-productos` VARCHAR(60) NOT NULL,
   `cantidades` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`telefono`));
 
-
---LLAVES FORANEAS
-
-
-  ALTER TABLE `emra-store-cr`.`usuarios` 
-ADD INDEX `fk_direccion_idx` (`id-direccion` ASC) VISIBLE,
-ADD INDEX `fk_datos_personales_idx` (`id-datos-personales` ASC) VISIBLE,
-ADD INDEX `fk_favoritos_idx` (`id-favoritos` ASC) VISIBLE;
-;
-ALTER TABLE `emra-store-cr`.`usuarios` 
-ADD CONSTRAINT `fk_direccion`
-  FOREIGN KEY (`id-direccion`)
-  REFERENCES `emra-store-cr`.`direccion` (`id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION,
-ADD CONSTRAINT `fk_datos_personales`
-  FOREIGN KEY (`id-datos-personales`)
-  REFERENCES `emra-store-cr`.`datos-personales` (`id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION,
-ADD CONSTRAINT `fk_favoritos`
-  FOREIGN KEY (`id-favoritos`)
-  REFERENCES `emra-store-cr`.`favoritos` (`id`)
-  ON DELETE SET NULL
-  ON UPDATE CASCADE;

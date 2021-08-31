@@ -1,8 +1,8 @@
 <?php
-$servername = "127.0.0.1";//localhost
-$database = "emra-store-cr";
-$username = "root";//Gerald
-$password = "";
+$servername = "localhost";//localhost - 127.0.0.1
+$database = "id17488232_emra_store_cr";//emra-store-cr
+$username = "id17488232_gerald";//Gerald
+$password = "Gamboa-Gamboa-2907-Ramirez-Fonseca";//
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
